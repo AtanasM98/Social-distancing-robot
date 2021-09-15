@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="project" type="movement_node" name="movement_node" output="screen"/>
+    <param name="MaxLinSpeed" value="1"/>
+    <param name="maxAngSpeed" value="0.5"/>
+</launch>

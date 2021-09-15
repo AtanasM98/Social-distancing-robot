@@ -1,0 +1,15 @@
+image: gcc
+build:
+  stage: build
+  script:
+    - cd robot/pathplanner
+    - make all
+  artifacts:
+    paths:
+
+test:
+  stage: test
+  script:
+    - cd robot/pathplanner
+    - make test
+    - ./test

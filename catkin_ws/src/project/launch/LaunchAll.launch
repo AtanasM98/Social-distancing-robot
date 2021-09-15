@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find project)/launch/Gazebo.launch" />
+    <include file="$(find project)/launch/lidar.launch" />
+
+</launch>

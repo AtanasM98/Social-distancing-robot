@@ -1,0 +1,25 @@
+<launch>
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <env name="GAZEBO_MODEL_PATH" value="$(find project)/models/bot"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find project)/world/homeForBeer.world"/> <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="recording" value="false"/>
+    <arg name="debug" value="true"/>
+    <arg name="verbose" value="true"/>
+  </include>
+  
+  <include file="$(find project)/launch/spawn_sdf.launch">
+  	<arg name="robot_name" value="bierbot" />
+        <arg name="x" value="0.0" />
+        <arg name="y" value="0.0" />
+        <arg name="z" value="1.0" />
+        <arg name="roll" value="0"/>
+        <arg name="pitch" value="0"/>
+        <arg name="yaw" value="0.0" />
+        <arg name="sdf_robot_file" value="$(find project)/models/bot/bierBot/model.sdf" />
+  </include>
+  
+</launch>

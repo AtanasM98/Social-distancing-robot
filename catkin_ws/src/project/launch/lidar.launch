@@ -1,0 +1,6 @@
+<launch>
+<node pkg="project" type="lidar_node" name="lidar_node" output="screen"/>
+<param name="minRange" value="160"/>
+<param name="maxRange" value="195"/>
+<param name="minDistance" value="1.1"/>
+</launch>
